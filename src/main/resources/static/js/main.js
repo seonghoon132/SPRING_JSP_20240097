@@ -11,7 +11,7 @@
     };
     spinner();
     
-    
+   
     // Initiate the wowjs
     new WOW().init();
 
@@ -121,6 +121,13 @@
         loop: true,
     });
 
-    
+    function confirmClose() {
+        if (confirm("현재 창을 닫으시겠습니까?")) {
+            window.close();  // 사용자가 '확인' 클릭 시 창 닫기
+        } else {
+            alert("취소되었습니다.");  // 취소 시 메시지 출력
+        }
+    }
+    window.confirmClose = confirmClose;
 })(jQuery);
 

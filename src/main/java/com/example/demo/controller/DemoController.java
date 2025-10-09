@@ -32,15 +32,29 @@ public class DemoController {
         model.addAttribute("para2", 002);  //컨트롤러를 통해 데이터를 전달함
     return "thymeleaf_test1";
      }
-     // 클래스 하단 작성
-@Autowired
+   
+
+     @Autowired
  TestService testService; // DemoController 클래스 아래 객체 생성
 // 하단에 맵핑 이어서 추가
+
     @GetMapping("/testdb")
     public String getAllTestDBs(Model model) {
         TestDB test = testService.findByName("홍길동");
         model.addAttribute("data4", test);
         System.out.println("데이터 출력 디버그 : " + test);
+        
+        TestDB test01 = testService.findByName("아저씨");
+        model.addAttribute("data5", test01);
+        System.out.println("데이터 출력 디버그 : " + test01);
+
+        TestDB test02 = testService.findByName("꾸러기");
+        model.addAttribute("data6", test02);
+        System.out.println("데이터 출력 디버그 : " + test02);
+
     return "testdb";
     }  
+     
+
+
 }

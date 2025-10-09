@@ -1,15 +1,16 @@
 package com.example.demo.model.domain;
 import jakarta.persistence.*;
 import lombok.Data;
-@Entity // TestDB라는객체와DB 테이블을매핑. JPA가관리
-@Table(name = "testdb") // 테이블이름은testdb
-@Data // set/get/tostring등필수어노테이션자동생성
+
+@Entity // TestDB라는 객체와 DB 테이블을 매핑. JPA가관리
+@Table(name = "testdb") // 테이블 이름은 testdb
+@Data // set/get/tostring 등 필수 어노테이션 자동 생성
 public class TestDB {
     @Id // 해당변수가PK
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // 값이없어도자동으로할당
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // 값이 없어도 자동으로 할당
     private Long id;
 
-    @Column(nullable = true) // 테이블의컬럼설정값을명시
+    @Column(nullable = true) // 테이블의 컬럼 설정값을 명시
     private String name;
 }
 
