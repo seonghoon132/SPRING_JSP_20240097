@@ -8,19 +8,19 @@ import jakarta.persistence.*; // 기존 javax 후속 버전
 @NoArgsConstructor(access = AccessLevel.PROTECTED) // 외부 생성자 접근 방지
 
 public class Article {
-@Id // 기본 키
-@GeneratedValue(strategy = GenerationType.IDENTITY) // 기본 키 1씩 증가
-@Column(name = "id", updatable = false) // 수정 x
- private Long id;
- @Column(name = "title", nullable = false) // null x
- private String title = ""; 
- @Column(name = "content", nullable = false)
- private String content = "";
- @Builder // 생성자에 빌더 패턴 적용(불변성)
- 
- public Article(String title, String content){
- this.title = title;
- this.content = content;
+    @Id // 기본 키
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // 기본 키 1씩 증가
+    @Column(name = "id", updatable = false) // 수정 x
+    private Long id;
+    @Column(name = "title", nullable = false) // null x
+    private String title = ""; 
+    @Column(name = "content", nullable = false)
+    private String content = "";
+    
+    @Builder // 생성자에 빌더 패턴 적용(불변성)
+    public Article(String title, String content){
+        this.title = title;
+        this.content = content;
  }
 }
 
