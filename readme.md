@@ -17,3 +17,18 @@ static 폴더에서 정적 자원을 관리하는데 Resource 폴더의 applicat
 
  3,4주차 연습문제를 나갔다. 되돌아가기 버튼에 창을 닫는 기능을 달아주었고 main.js파일에 confirmClose() 함수 추가함 함수 구현에 window.Close를 써줌.
  4주차에서 인서트로 MYSQL확장 활용했고 컨트롤러와 html수정함. 5주차 강의 이어서 나갔다. 게시글 추가를 구현했고 서비스 클래스를 수정하여 제목과 내용을 쓰고 추가버튼을 눌러서 다시 게시판에 들어갔을 때 수정이 되게 구현함.
+
+
+ 5주차 연습문제
+ RestController 방식에서 Controller 방식으로 바꿈 (기존 RestController는 주석처리, return "redirect:/article_list"'로 반환)
+ html에서 th:action = @{/api/article}에서 api 제거
+
+
+
+ 6주차
+ 수정 삭제버튼 추가
+ 컨트롤러 클래스 추가
+ +에러페이지 추가
+
+ 6주차 연습문제
+ - 에러 페이지 예외상황 추가 ex http://localhost:8080/article_edit/2123fff 문자열인 상황
