@@ -37,9 +37,9 @@ import org.springframework.stereotype.Service;
 //    return blogRepository2.findAll();
 //  }
 
-//  public Optional<Board> findById(Long id) { // 게시판 특정 글 조회
-//     return blogRepository2.findById(id);
-// }
+ public Optional<Board> findById(Long id) { // 게시판 특정 글 조회
+    return blogRepository2.findById(id);
+}
  
 //  public Optional<Article> findById(Long id) { // 게시판특정글조회
 //     return blogRepository.findById(id);
